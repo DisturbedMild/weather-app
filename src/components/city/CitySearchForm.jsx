@@ -1,9 +1,12 @@
 import React, { useRef } from 'react';
+import { useDispatch } from 'react-redux';
 
-import classes from './WeatherSearchForm.module.scss';
+import addNewCity from '../../store/actions/addNewCity';
+import classes from './CitySearchForm.module.scss';
 
-function WeatherSearch() {
 
+function CitySearch() {
+	const dispatch = useDispatch();
 	const searchInputTextRef = useRef();
 
 	const onSubmitHandler = (e) => {
@@ -11,7 +14,7 @@ function WeatherSearch() {
 		const searchedCity = searchInputTextRef.current.value;
 		
 		if(searchedCity.trim().length !== 0) {
-			console.log(searchedCity);
+			dispatch(addNewCity(searchedCity));
 		} 
 	}
 
@@ -23,4 +26,4 @@ function WeatherSearch() {
   );
 }
 
-export default WeatherSearch;
+export default CitySearch;

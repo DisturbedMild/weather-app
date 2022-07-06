@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '@mui/material';
 import Header from './components/layout/Header';
-import Weather from './components/weather/Weather';
+import Cities from './components/city/Cities';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Header />
       <main>
         <Container maxWidth='xl'>
-          <Weather />
+          <Cities />
         </Container>
       </main>
     </>

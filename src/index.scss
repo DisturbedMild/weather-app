@@ -19,3 +19,8 @@ body {
 main {
   padding: 2rem;
 }
+
+ul {
+  display: flex;
+  flex-direction: column-reverse;
+}
