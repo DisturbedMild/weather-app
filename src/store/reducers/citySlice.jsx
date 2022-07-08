@@ -44,7 +44,9 @@ export const citySlice = createSlice({
         );
         state.cities = updatedCities;
         localStorage.removeItem('items');
-        localStorage.setItem('items', JSON.stringify(state.cities));
+        if(state.cities.length > 0) {
+          localStorage.setItem('items', JSON.stringify(state.cities));
+        }
       }
     },
   },
