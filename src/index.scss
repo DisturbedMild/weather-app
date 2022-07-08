@@ -1,10 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --skyblue: rgb(0, 145, 182);
+  --white: #fff;
+  --font-header: 'Sourse Serif Pro', serif;
 }
 body {
  margin: auto;
- width: 1920px;
+ max-width: 1920px;
+ width: 100%;
  font-family: 'Inter', sans-serif;
+
+}
+
+main {
+  padding: 2rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column-reverse;
 }

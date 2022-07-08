@@ -1,0 +1,48 @@
+.item {
+	list-style-type: none;
+	border: 1px solid var(--skyblue);
+	padding: 1rem;
+	border-radius: 4px;
+	text-align: center;
+	cursor: pointer;
+	min-height: 240px;
+}
+.item-city {
+	font-size: 2rem;
+	line-height: 1.2;
+	font-weight: 700;
+	margin-bottom: 0.7rem;
+	span {
+		font-size: 1rem;
+	}
+}
+
+.item-temperature {
+	font-size: 2rem;
+	font-weight: 300;
+	font-style: italic;
+	color: var(--skyblue);
+	margin-bottom: 0.7rem;
+	text-transform: capitalize;
+}
+.item-additional {
+	font-size: 1.2rem;
+	margin-bottom: 0.7rem;
+	span {
+		color: grey;
+		font-style: italic;
+	}
+}
+.item-buttons {
+	justify-content: space-between;
+	display: flex;
+	button {
+		width: 48%;
+		height: 40px;
+		border: 2px solid transparent;
+		background-color: var(--skyblue);
+		color: var(--white);
+		border-radius: 4px;
+		cursor: pointer;
+	}
+}

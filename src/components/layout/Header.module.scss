@@ -1,0 +1,15 @@
+.heading {
+	background-color: var(--skyblue);
+	height: 100px;
+	box-shadow: 0 0 3px 4px rgba(0, 145, 182, 0.2);
+	padding: 2rem 0;
+	h1 {
+		color: var(--white);
+		margin-right: 1rem;
+	}
+}
+.flex {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
