@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
 export const citySlice = createSlice({
@@ -20,7 +21,6 @@ export const citySlice = createSlice({
         localStorage.removeItem('items');
         localStorage.setItem('items', JSON.stringify(state.cities));
       }
-
     },
     updateCity: (state, action) => {
       const itemIndex = state.cities.findIndex(
@@ -29,18 +29,22 @@ export const citySlice = createSlice({
       const existingItem = state.cities[itemIndex];
 
       if (existingItem) {
-        // eslint-disable-next-line no-param-reassign
         state.cities[itemIndex] = action.payload;
       }
     },
     removeCity: (state, action) => {
       const itemIndex = state.cities.findIndex(
-        (item) => item.name === action.payload.name
+        (item) => item.name === action.payload
       );
       const existingItem = state.cities[itemIndex];
 
       if (existingItem) {
-        state.cities.filter((item) => item.name !== action.payload.name);
+        const updatedCities = state.cities.filter(
+          (item) => item.name !== action.payload
+        );
+        state.cities = updatedCities;
+        localStorage.removeItem('items');
+        localStorage.setItem('items', JSON.stringify(state.cities));
       }
     },
   },

@@ -4,10 +4,9 @@ import uiReducer from './reducers/uiSlice';
 
 const store = configureStore({
   reducer: {
-		city: cityReducer,
-		ui: uiReducer
-	},
+    city: cityReducer,
+    ui: uiReducer,
+  },
 });
-
 
 export default store;

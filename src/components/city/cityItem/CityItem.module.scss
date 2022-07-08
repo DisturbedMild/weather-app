@@ -12,6 +12,9 @@
 	line-height: 1.2;
 	font-weight: 700;
 	margin-bottom: 0.7rem;
+	span {
+		font-size: 1rem;
+	}
 }
 
 .item-temperature {
@@ -20,6 +23,7 @@
 	font-style: italic;
 	color: var(--skyblue);
 	margin-bottom: 0.7rem;
+	text-transform: capitalize;
 }
 .item-additional {
 	font-size: 1.2rem;

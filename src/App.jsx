@@ -8,7 +8,7 @@ function App() {
     <>
       <Header />
       <main>
-        <Container maxWidth='xl'>
+        <Container maxWidth="xl">
           <Cities />
         </Container>
       </main>
